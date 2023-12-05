@@ -1,4 +1,4 @@
-import mongoose, { ConnectOptions } from "mongoose";
+import mongoose, { ConnectOptions } from "mongoose"
 
 export function createDatabaseConnection(
 	uri: string,
@@ -6,19 +6,19 @@ export function createDatabaseConnection(
 ) {
 	const connect = async () => {
 		try {
-			await mongoose.connect(uri, options);
+			await mongoose.connect(uri, options)
 		} catch (error) {
-			console.log(error);
+			console.log(error)
 		}
-	};
+	}
 
 	const disconnect = async () => {
 		try {
-			await mongoose.disconnect();
+			await mongoose.disconnect()
 		} catch (error) {
-			console.log(error);
+			console.log(error)
 		}
-	};
+	}
 
-	return { connect, disconnect };
+	return { connect, disconnect }
 }

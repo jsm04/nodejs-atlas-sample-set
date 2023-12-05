@@ -8,6 +8,9 @@
 		"start": "npx tsc && node dist/bootstrap.js",
 		"dev": "npx nodemon ./src/bootstrap.ts"
 	},
+	"prettier": {
+		"semi": false
+	},
 	"author": "jsm",
 	"license": "ISC",
 	"dependencies": {

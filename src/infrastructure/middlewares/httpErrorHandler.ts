@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from "express";
-import { serverLoggerService } from "../../app/common/loggers";
-import { HttpError } from "../../app/common/utils/HttpError";
+import { Request, Response, NextFunction } from "express"
+import { serverLoggerService } from "../../app/common/loggers"
+import { HttpError } from "../../app/common/utils/HttpError"
 
 export const httpErrorHandler = function (
 	e: unknown,
@@ -8,5 +8,5 @@ export const httpErrorHandler = function (
 	res: Response,
 	next: NextFunction,
 ) {
-	next(e);
-};
+	next(e)
+}

@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from "express";
-import { debugService } from "../../app/services/debug.service";
+import { NextFunction, Request, Response } from "express"
+import { debugService } from "../../app/services/debug.service"
 
 export const debugController = async function (
 	_: Request,
@@ -7,9 +7,9 @@ export const debugController = async function (
 	next: NextFunction,
 ) {
 	try {
-		const result = await debugService.getAllUsers();
-		res.send(result);
+		const result = await debugService.getAllUsers()
+		res.send(result)
 	} catch (error) {
-		next(error);
+		next(error)
 	}
-};
+}

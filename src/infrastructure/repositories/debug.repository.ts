@@ -1,12 +1,19 @@
-import { AbstractMongoRepository } from "../../domain/interfaces/Repository";
-import { debugModelFactory } from "../models/debugModelFactory";
+import { AbstractMongoRepository } from "../../domain/interfaces/Repository"
+import mongoose, { Schema } from "mongoose"
 
-const UsersModel = debugModelFactory("users");
+const debugModelFactory = (collectionName: string) =>
+	mongoose.model(
+		collectionName,
+		new Schema({}, { strict: false }),
+		collectionName,
+	)
+
+const UsersModel = debugModelFactory("users")
 
 export class DebugRepository extends AbstractMongoRepository<any> {
 	constructor() {
-		super(UsersModel);
+		super(UsersModel)
 	}
 }
 
-export const debugRepository = new DebugRepository();
+export const debugRepository = new DebugRepository()

@@ -1,8 +1,8 @@
-import { Router } from "express";
-import { debugController } from "../../controllers/debug.controller";
+import { Router } from "express"
+import { debugController } from "../../controllers/debug.controller"
 
-const testRouter = Router();
+const testRouter = Router()
 
-testRouter.get("/debug", debugController);
+testRouter.get("/debug", debugController)
 
-export default testRouter;
+export default testRouter
